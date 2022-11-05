@@ -306,7 +306,7 @@ window.onclick = function(event) {
             <td style="width:22%">
                 <b class="button-blue" style="width:98%"><span id="cimesg"></span></b></td>
             <td style="width:22">
-                <input type="number" name="Pattern" min="1" max="73" value="36" class="button-blue" style="width:30%" id="Modepat">
+                <input type="number" name="Pattern" min="1" max="75" value="38" class="button-blue" style="width:30%" id="Modepat">
                 <button class="button-blue" onclick="myFunctionPatt()" style="width:50%">Set Mode</button>
             </td>
             <td style="width:25%">
