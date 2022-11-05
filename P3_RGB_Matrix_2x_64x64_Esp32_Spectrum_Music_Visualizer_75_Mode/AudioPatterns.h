@@ -24,7 +24,7 @@ class AudioPatterns : public Playlist {
   public:
     typedef void (AudioPatterns::*AudioPatternFunctionPointer)(void);
     AudioPatternFunctionPointer currentItem;
-    static const int PATTERN_COUNT = 74;
+    static const int PATTERN_COUNT = 75;
     AudioPatternFunctionPointer shuffledItems[PATTERN_COUNT];
     AudioPatternFunctionPointer items[PATTERN_COUNT] = {
       &AudioPatterns::SpMuAudio1,
@@ -100,7 +100,8 @@ class AudioPatterns : public Playlist {
       &AudioPatterns::SpMuAudio71,
       &AudioPatterns::SpMuAudio72,
       &AudioPatterns::SpMuAudio73,
-      &AudioPatterns::SpMuAudio74
+      &AudioPatterns::SpMuAudio74,
+      &AudioPatterns::SpMuAudio75
     };
     
     void SpMuAudio1() {
@@ -335,6 +336,9 @@ class AudioPatterns : public Playlist {
     }
     void SpMuAudio74() {
       drawAudio7(13);
+    }
+    void SpMuAudio75() {
+      drawAudio7(14);
     }
 
 
@@ -605,6 +609,11 @@ class AudioPatterns : public Playlist {
         break;
         case 13 :
         effects.fillRect(x1, y1, x2-x1, 63-((y1+y2)/2), color);
+        break;
+        case 14 :
+        int w = (x2-x1)/2;
+        effects.fillRect(x1, y1, w, 63-y1, color);
+        effects.fillRect(x1+w, y2, w, 63-y2, color0);
         break;
       }
     }
